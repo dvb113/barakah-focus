@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barakah Focus</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div>
+        <h1>Barakah Focus</h1>
+        <p class="subtitle">Protect your time &amp; remember your prayers</p>
+      </div>
+      <label class="switch" title="Toggle Focus Mode">
+        <input type="checkbox" id="focusToggle" />
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <section class="card">
+      <div class="card-title-row">
+        <h2>Distraction Shield</h2>
+        <span id="focusStatusBadge" class="badge badge-off">Off</span>
+      </div>
+      <label class="checkbox-row">
+        <input type="checkbox" id="blockShortsToggle" />
+        <span>Hide YouTube Shorts &amp; Instagram Reels</span>
+      </label>
+
+      <div class="blocklist-input">
+        <input type="text" id="siteInput" placeholder="e.g. tiktok.com" />
+        <button id="addSiteBtn" type="button">Block</button>
+      </div>
+      <ul id="blockedSitesList" class="site-list"></ul>
+    </section>
+
+    <section class="card">
+      <div class="card-title-row">
+        <h2>Prayer Reminders</h2>
+        <label class="checkbox-inline">
+          <input type="checkbox" id="prayerNotifyToggle" />
+          <span>Notify</span>
+        </label>
+      </div>
+      <div class="location-row">
+        <input type="text" id="cityInput" placeholder="City (e.g. Casablanca)" />
+        <input type="text" id="countryInput" placeholder="Country (e.g. Morocco)" />
+        <button id="saveLocationBtn" type="button">Save</button>
+      </div>
+      <p id="locationStatus" class="status-text"></p>
+      <div id="prayerTimesGrid" class="prayer-grid"></div>
+    </section>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
